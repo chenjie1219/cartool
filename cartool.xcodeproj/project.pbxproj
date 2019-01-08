@@ -11,6 +11,10 @@
 		047CF43321E46F710004CD73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CF43221E46F710004CD73 /* ViewController.swift */; };
 		047CF43521E46F720004CD73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047CF43421E46F720004CD73 /* Assets.xcassets */; };
 		047CF43821E46F720004CD73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047CF43621E46F720004CD73 /* Main.storyboard */; };
+		047CF44121E472270004CD73 /* CustomWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CF44021E472270004CD73 /* CustomWindow.swift */; };
+		047CF44321E4722F0004CD73 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CF44221E4722F0004CD73 /* Shell.swift */; };
+		047CF44521E4731B0004CD73 /* cartool in Resources */ = {isa = PBXBuildFile; fileRef = 047CF44421E4731B0004CD73 /* cartool */; };
+		047CF44721E476060004CD73 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CF44621E476060004CD73 /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +24,10 @@
 		047CF43421E46F720004CD73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047CF43721E46F720004CD73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		047CF43921E46F720004CD73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		047CF43A21E46F720004CD73 /* cartool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cartool.entitlements; sourceTree = "<group>"; };
+		047CF44021E472270004CD73 /* CustomWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWindow.swift; sourceTree = "<group>"; };
+		047CF44221E4722F0004CD73 /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
+		047CF44421E4731B0004CD73 /* cartool */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = cartool; sourceTree = "<group>"; };
+		047CF44621E476060004CD73 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +60,15 @@
 		047CF42F21E46F710004CD73 /* cartool */ = {
 			isa = PBXGroup;
 			children = (
+				047CF44421E4731B0004CD73 /* cartool */,
 				047CF43021E46F710004CD73 /* AppDelegate.swift */,
 				047CF43221E46F710004CD73 /* ViewController.swift */,
+				047CF44221E4722F0004CD73 /* Shell.swift */,
+				047CF44021E472270004CD73 /* CustomWindow.swift */,
+				047CF44621E476060004CD73 /* CustomView.swift */,
 				047CF43421E46F720004CD73 /* Assets.xcassets */,
 				047CF43621E46F720004CD73 /* Main.storyboard */,
 				047CF43921E46F720004CD73 /* Info.plist */,
-				047CF43A21E46F720004CD73 /* cartool.entitlements */,
 			);
 			path = cartool;
 			sourceTree = "<group>";
@@ -95,6 +105,11 @@
 				TargetAttributes = {
 					047CF42C21E46F710004CD73 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -121,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047CF44521E4731B0004CD73 /* cartool in Resources */,
 				047CF43521E46F720004CD73 /* Assets.xcassets in Resources */,
 				047CF43821E46F720004CD73 /* Main.storyboard in Resources */,
 			);
@@ -133,8 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047CF44721E476060004CD73 /* CustomView.swift in Sources */,
 				047CF43321E46F710004CD73 /* ViewController.swift in Sources */,
 				047CF43121E46F710004CD73 /* AppDelegate.swift in Sources */,
+				047CF44321E4722F0004CD73 /* Shell.swift in Sources */,
+				047CF44121E472270004CD73 /* CustomWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +222,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -258,7 +277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -271,7 +290,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = cartool/cartool.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = cartool/Info.plist;
@@ -279,6 +297,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cartool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -289,7 +308,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = cartool/cartool.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = cartool/Info.plist;
@@ -297,6 +315,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cartool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
