@@ -46,7 +46,9 @@ class ViewController: NSViewController {
             return
         }
         
-        Shell.execmd(carToolPath(), arguments: [path,dir]) { (str) in
+        let decodePath = path.removingPercentEncoding ?? ""
+        
+        Shell.execmd(carToolPath(), arguments: [decodePath,dir]) { (str) in
             
         }
         
@@ -68,7 +70,7 @@ class ViewController: NSViewController {
             return ""
         }
         
-        let dir = url.absoluteString + "生成car图片的目录"
+        let dir = (url.absoluteString.removingPercentEncoding ?? "") + "Assets"
         
         if FileManager.default.fileExists(atPath: dir) {
             return dir

@@ -87,8 +87,6 @@ class CustomView: NSView {
                 
                 let filePath = String(str[index..<str.endIndex])
                 
-                print(filePath)
-                
                 dragEndBlock?(filePath)
                 
             }else {
