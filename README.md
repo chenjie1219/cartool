@@ -1,11 +1,9 @@
 
 ## Requirements
 - Swift 4.2
-- OSX 10.13+
-- Xcode 9.x
+- OSX 10.13 +
 
-
-![1](Assets/1.png)
+![1](Assets/1.gif)
 
 Mac上解压Assets.car文件的小工具
 

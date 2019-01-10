@@ -15,6 +15,10 @@ class CustomWindow: NSWindowController {
     
         window?.isMovableByWindowBackground = true
         
+        window?.isOpaque = false
+
+        window?.backgroundColor = .clear
+        
         window?.center()
     }
 

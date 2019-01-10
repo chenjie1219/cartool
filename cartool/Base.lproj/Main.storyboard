@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -684,7 +685,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" customClass="CustomWindow" customModule="cartool" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
+                    <window key="window" title="Assets.car" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -706,59 +707,45 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="cartool" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="460" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="28f-b3-JlB">
+                                <rect key="frame" x="180" y="105" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1jI-26-n4z"/>
+                                    <constraint firstAttribute="width" secondItem="28f-b3-JlB" secondAttribute="height" multiplier="1:1" id="6cL-kl-mqj"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icon" id="L3Q-vO-PhT"/>
+                            </imageView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="WJp-1f-NCl" customClass="CustomView" customModule="cartool" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="80" width="480" height="190"/>
+                                <rect key="frame" x="0.0" y="0.0" width="460" height="270"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="96Z-Oy-Ar9">
-                                        <rect key="frame" x="149" y="86" width="183" height="19"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="将.car的文件拖动灰色区域" id="qEE-YH-jKq">
+                                        <rect key="frame" x="167" y="66" width="126" height="19"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Drag .car file here" id="qEE-YH-jKq">
                                             <font key="font" metaFont="system" size="15"/>
                                             <color key="textColor" red="1" green="0.25098039220000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="96Z-Oy-Ar9" firstAttribute="centerX" secondItem="WJp-1f-NCl" secondAttribute="centerX" id="AnN-1T-Ibd"/>
-                                    <constraint firstItem="96Z-Oy-Ar9" firstAttribute="centerY" secondItem="WJp-1f-NCl" secondAttribute="centerY" id="lKB-A4-8rx"/>
-                                </constraints>
-                            </customView>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="C59-ck-nGN">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="80"/>
-                                <subviews>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nfE-6r-yAK">
-                                        <rect key="frame" x="190" y="30" width="100" height="19"/>
-                                        <buttonCell key="cell" type="roundRect" title="生成到当前目录" bezelStyle="roundedRect" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gjL-kx-AWB">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="cellTitle"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="okBtnClick:" target="XfG-lQ-9wD" id="3oO-Ga-7df"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="nfE-6r-yAK" firstAttribute="centerY" secondItem="C59-ck-nGN" secondAttribute="centerY" id="A0p-0C-hu8"/>
-                                    <constraint firstItem="nfE-6r-yAK" firstAttribute="centerX" secondItem="C59-ck-nGN" secondAttribute="centerX" id="RBl-2x-pTw"/>
-                                </constraints>
                             </customView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="WJp-1f-NCl" secondAttribute="trailing" id="7eI-4c-mE5"/>
-                            <constraint firstAttribute="bottom" secondItem="WJp-1f-NCl" secondAttribute="bottom" constant="80" id="Jv3-mI-BbU"/>
-                            <constraint firstItem="C59-ck-nGN" firstAttribute="top" secondItem="WJp-1f-NCl" secondAttribute="bottom" id="Lkb-hi-1cd"/>
+                            <constraint firstItem="28f-b3-JlB" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" constant="-20" id="Hu8-SY-wF3"/>
+                            <constraint firstItem="28f-b3-JlB" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="IJe-v0-Mfh"/>
+                            <constraint firstAttribute="bottom" secondItem="WJp-1f-NCl" secondAttribute="bottom" id="Jv3-mI-BbU"/>
                             <constraint firstItem="WJp-1f-NCl" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="Ruf-qF-nV5"/>
                             <constraint firstItem="WJp-1f-NCl" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="SDp-GO-Kdk"/>
-                            <constraint firstItem="C59-ck-nGN" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="Yfi-CW-bFX"/>
-                            <constraint firstAttribute="trailing" secondItem="C59-ck-nGN" secondAttribute="trailing" id="aEx-f7-CAA"/>
-                            <constraint firstAttribute="bottom" secondItem="C59-ck-nGN" secondAttribute="bottom" id="qsX-eM-c4N"/>
+                            <constraint firstItem="96Z-Oy-Ar9" firstAttribute="centerX" secondItem="28f-b3-JlB" secondAttribute="centerX" id="YeQ-he-CX0"/>
+                            <constraint firstItem="96Z-Oy-Ar9" firstAttribute="top" secondItem="28f-b3-JlB" secondAttribute="bottom" constant="20" id="l8U-lY-Ald"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dragView" destination="WJp-1f-NCl" id="ndu-Ki-kxL"/>
+                        <outlet property="mainView" destination="m2S-Jp-Qdl" id="eaJ-pt-KLB"/>
                         <outlet property="titleLbl" destination="96Z-Oy-Ar9" id="bTi-Tr-yuv"/>
                     </connections>
                 </viewController>
@@ -767,4 +754,7 @@
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon" width="200" height="200"/>
+    </resources>
 </document>

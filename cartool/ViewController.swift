@@ -9,44 +9,44 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
-    @IBOutlet weak var titleLbl: NSTextField!
     
-    lazy var isDrag = false
+    @IBOutlet var mainView: NSView!
+    
+    @IBOutlet weak var titleLbl: NSTextField!
     
     @IBOutlet weak var dragView: CustomView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        dragView.dragEndBlock = {path in
-            
-            self.titleLbl.stringValue = path
-            
-            self.isDrag = true
-            
-        }
-    }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
-    @IBAction func okBtnClick(_ sender: Any) {
         
-        if isDrag {
+        mainView.insertVisualEffectView(mode: .behindWindow)
+        
+        dragView.dragEndBlock = {[weak self] path in
             
-            let dir = mkdir(filePath: titleLbl.stringValue)
-            
-            if dir.isEmpty{
+            guard let self = self else {
                 return
             }
             
-            Shell.execmd(carToolPath(), arguments: [titleLbl.stringValue,dir]) { (str) in
-                
-            }
+            self.executeCartool(path)
+            
+        }
+    }
+    
+    override var representedObject: Any? {
+        didSet {
+            // Update the view, if already loaded.
+        }
+    }
+    
+    func executeCartool(_ path:String) {
+        
+        let dir = mkdir(filePath: path)
+        
+        if dir.isEmpty{
+            return
+        }
+        
+        Shell.execmd(carToolPath(), arguments: [path,dir]) { (str) in
             
         }
         

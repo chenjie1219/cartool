@@ -15,6 +15,7 @@
 		047CF44321E4722F0004CD73 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CF44221E4722F0004CD73 /* Shell.swift */; };
 		047CF44521E4731B0004CD73 /* cartool in Resources */ = {isa = PBXBuildFile; fileRef = 047CF44421E4731B0004CD73 /* cartool */; };
 		047CF44721E476060004CD73 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CF44621E476060004CD73 /* CustomView.swift */; };
+		049AD71A21E6F8F700BD1C49 /* NSView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049AD71921E6F8F700BD1C49 /* NSView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		047CF44221E4722F0004CD73 /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 		047CF44421E4731B0004CD73 /* cartool */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = cartool; sourceTree = "<group>"; };
 		047CF44621E476060004CD73 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		049AD71921E6F8F700BD1C49 /* NSView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				047CF44221E4722F0004CD73 /* Shell.swift */,
 				047CF44021E472270004CD73 /* CustomWindow.swift */,
 				047CF44621E476060004CD73 /* CustomView.swift */,
+				049AD71921E6F8F700BD1C49 /* NSView+.swift */,
 				047CF43421E46F720004CD73 /* Assets.xcassets */,
 				047CF43621E46F720004CD73 /* Main.storyboard */,
 				047CF43921E46F720004CD73 /* Info.plist */,
@@ -152,6 +155,7 @@
 				047CF44721E476060004CD73 /* CustomView.swift in Sources */,
 				047CF43321E46F710004CD73 /* ViewController.swift in Sources */,
 				047CF43121E46F710004CD73 /* AppDelegate.swift in Sources */,
+				049AD71A21E6F8F700BD1C49 /* NSView+.swift in Sources */,
 				047CF44321E4722F0004CD73 /* Shell.swift in Sources */,
 				047CF44121E472270004CD73 /* CustomWindow.swift in Sources */,
 			);

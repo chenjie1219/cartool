@@ -12,16 +12,17 @@ class CustomView: NSView {
     
     var dragEndBlock:((String)->())?
     
+    lazy var dragExited = false
+    
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        
-        layer?.backgroundColor = NSColor.lightGray.cgColor
-        
         registerForDraggedTypes([NSPasteboard.PasteboardType.fileURL])
     }
     
     
     override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
+        
+        dragExited = false
         
         let pb = sender.draggingPasteboard
         
@@ -53,7 +54,16 @@ class CustomView: NSView {
     }
     
     
+    override func draggingExited(_ sender: NSDraggingInfo?) {
+        dragExited = true
+    }
+    
+    
     override func draggingEnded(_ sender: NSDraggingInfo) {
+        
+        if dragExited {
+            return
+        }
         
         let pb = sender.draggingPasteboard
         
