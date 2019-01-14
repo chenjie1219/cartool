@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041937A021EC589300CA5CED /* ServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0419379F21EC589300CA5CED /* ServiceHelper.swift */; };
 		047CF43121E46F710004CD73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CF43021E46F710004CD73 /* AppDelegate.swift */; };
 		047CF43321E46F710004CD73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CF43221E46F710004CD73 /* ViewController.swift */; };
 		047CF43521E46F720004CD73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047CF43421E46F720004CD73 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0419379F21EC589300CA5CED /* ServiceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHelper.swift; sourceTree = "<group>"; };
 		047CF42D21E46F710004CD73 /* cartool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cartool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047CF43021E46F710004CD73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047CF43221E46F710004CD73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				047CF44021E472270004CD73 /* CustomWindow.swift */,
 				047CF44621E476060004CD73 /* CustomView.swift */,
 				049AD71921E6F8F700BD1C49 /* NSView+.swift */,
+				0419379F21EC589300CA5CED /* ServiceHelper.swift */,
 				047CF43421E46F720004CD73 /* Assets.xcassets */,
 				047CF43621E46F720004CD73 /* Main.storyboard */,
 				047CF43921E46F720004CD73 /* Info.plist */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				047CF44721E476060004CD73 /* CustomView.swift in Sources */,
+				041937A021EC589300CA5CED /* ServiceHelper.swift in Sources */,
 				047CF43321E46F710004CD73 /* ViewController.swift in Sources */,
 				047CF43121E46F710004CD73 /* AppDelegate.swift in Sources */,
 				049AD71A21E6F8F700BD1C49 /* NSView+.swift in Sources */,
